@@ -1,0 +1,36 @@
+name: UtilsPlugin
+author: OmaMitRollator
+version: 1.0
+main: de.omamitrollator.utils.main.Main
+
+commands:
+ 
+   heal:
+      description: Heal yourself or a other Player!
+      
+   fly:
+      description: Set yourself or other Players in the FlyMode!
+      
+   day:
+      description: Set the time to Day!
+      
+   night:
+      description: Set the time to Night!
+      
+   cc:
+      description: Clear the Chat!
+      
+   vanish:
+      description: Vanish yourself!
+      
+   gm:
+      description: Set your Gamemode!
+      
+   speed:
+      description: Set your Speed!
+      
+   head:
+      description: Give yourself every head in the game!
+
+   godmode:
+      description: Go in the Godmode!
