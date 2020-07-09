@@ -1,0 +1,25 @@
+
+
+public class PingUtil {
+    private Method getHandleMethod;
+    private Field pingField;
+
+    public static int getPlayerPing(Player player){
+        try {
+            if (this.getHandleMethod == null) {
+                this.getHandleMethod = player.getClass().getDeclaredMethod("getHandle");
+                this.getHandleMethod.setAccessible(true);
+            }
+            Object entityPlayer = this.getHandleMethod.invoke(player);
+            if (this.pingField == null) {
+                this.pingField = entityPlayer.getClass().getDeclaredField("ping");
+                this.pingField.setAccessible(true);
+            }
+            int ping = this.pingField.getInt(entityPlayer);
+            return Math.max(ping, 0);
+        } catch (Exception e) {
+            return 1;
+        }
+    }
+
+}
